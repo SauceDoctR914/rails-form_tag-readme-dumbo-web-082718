@@ -112,3 +112,139 @@ Processing by PostsController#new as HTML
   Parameters: {"post"=>{"action"=>"create", "authenticity_token"=>"wM0kUAuTuVVs64yO9C+2FgVExLWEkXYBL4fHjMvdHb/wXQBnEIZ1bXK7fKn5neP40gN03qULwt9kcGv5dkFKWg==", "commit"=>"Submit Post", "controller"=>"posts", "description"=>"asdf", "title"=>"Rails Introduction Quiz", "utf8"=>"✓"}}
   Rendered posts/new.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-09-25 10:31:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (8.4ms)
+Completed 200 OK in 47ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2018-09-25 10:31:22 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/railties-4.2.10/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-09-25 10:31:28 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 720ms (Views: 711.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2018-09-25 10:31:29 -0400
+
+
+Started GET "/posts/new" for ::1 at 2018-09-25 10:37:46 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 124ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new?post%5Btitle%5D=My+post&post%5Bdescription%5D=numero+uno&authenticity_token=aj4YsR6Lxux64dmH9u8yf0p%2FmVxInk9d5gm8%2BjsNMeTGqIwC51bYSPAP9mYHqok1E%2B6FPlYr8mGm9l6DGl1p2A%3D%3D" for ::1 at 2018-09-25 10:38:19 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"post"=>{"title"=>"My post", "description"=>"numero uno"}, "authenticity_token"=>"aj4YsR6Lxux64dmH9u8yf0p/mVxInk9d5gm8+jsNMeTGqIwC51bYSPAP9mYHqok1E+6FPlYr8mGm9l6DGl1p2A=="}
+  Rendered posts/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2018-09-25 10:40:03 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 140ms (Views: 132.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-25 10:40:08 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-09-25 10:40:11 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"post"=>{"title"=>"g", "description"=>"av"}, "authenticity_token"=>"EFKz2HXie524qPruCqia4GBFJXmdoy1FAkw6JjAHAP68xCdrjD9lOTJG1Q/77SGqOdQ5G4MWkHlCs9hfEVdYwg=="}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "g"], ["description", "av"], ["created_at", "2018-09-25 14:40:11.965080"], ["updated_at", "2018-09-25 14:40:11.965080"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 55ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/posts" for ::1 at 2018-09-25 10:40:11 -0400
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts" for ::1 at 2018-09-25 11:00:14 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.2ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 137ms (Views: 126.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-25 11:00:19 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/Gbabyboy/labs/MODULE2/rails-form_tag-readme-dumbo-web-082718/app/views/posts/new.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Gbabyboy/labs/MODULE2/rails-form_tag-readme-dumbo-web-082718/app/views/posts/new.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/new.html.erb:13: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/new.html.erb:15: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (71.1ms)
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (195.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-25 11:00:33 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/Gbabyboy/labs/MODULE2/rails-form_tag-readme-dumbo-web-082718/app/views/posts/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Gbabyboy/labs/MODULE2/rails-form_tag-readme-dumbo-web-082718/app/views/posts/new.html.erb:13: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/posts/new.html.erb:11: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/posts/new.html.erb:13: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Gbabyboy/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-25 11:02:41 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 99ms (Views: 98.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-09-25 11:03:39 -0400
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 128ms (Views: 125.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2018-09-25 11:03:43 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ihrX+B3Bqe4n/0kGibTE6FyKsn5Smpeln066E9JLmEEmjENL5By3Sq0RZud48X+iBRuuHEwvKpnfsVhq8xvAfQ==", "post"=>{"title"=>"av", "description"=>"g"}}
+  [1m[36m (1.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "av"], ["description", "g"], ["created_at", "2018-09-25 15:03:43.789891"], ["updated_at", "2018-09-25 15:03:43.789891"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 31ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/posts" for ::1 at 2018-09-25 11:03:43 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (1.1ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 1.1ms)
